@@ -1,0 +1,78 @@
+:root {
+	--g1: rgb(10, 10, 150);
+	--g2: rgb(10, 150, 10);
+	--g3: rgb(150, 10, 10);
+	--gsep: rgb(250, 250, 250);
+
+	--gtime: 10s;
+
+	--bgcolor: rgb(10, 10, 10);
+	--txtcolor: rgb(250, 250, 250);
+
+	--btnbgcolor: rgb(50, 50, 50);
+}
+
+body {
+	animation: bgpan var(--gtime) linear infinite;
+
+	background: linear-gradient(
+		to bottom,
+		var(--g1),
+		var(--gsep),
+		var(--g2),
+		var(--gsep),
+		var(--g3),
+		var(--gsep),
+		var(--g1)
+	);
+
+	background-size: 100% 500%;
+
+	color: var(--txtcolor);
+}
+
+#tiles-container {
+	position: absolute;
+
+	top: 0px;
+	bottom: 0px;
+
+	width: 100%;
+	height: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+	grid-template-rows: repeat(var(--rows), 1fr);
+
+	z-index: 1;
+}
+
+.tile {
+	position: relative;
+	transition: all 0.1s linear;
+	opacity: 1;
+}
+
+.tile:before {
+	background-color: var(--bgcolor);
+	content: "";
+	position: absolute;
+	border-radius: var(--borderRadius);
+}
+
+.tile-bordered:before {
+	inset: 0.5px;
+}
+
+.tile-noborder:before {
+	inset: 0px;
+}
+
+@keyframes bgpan {
+	from {
+		background-position: center 500vh;
+	}
+	to {
+		background-position: center 0vh;
+	}
+}
