@@ -76,6 +76,8 @@ const clearOpacity = () => {
 	}
 };
 
+const updateSettings = () => {};
+
 updateGrid();
 window.onresize = () => {
 	updateGrid();

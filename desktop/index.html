@@ -6,15 +6,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 
+		<!--ICONS-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+			integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!--BASE CSS-->
 		<link rel="stylesheet" href="styles/base.css" />
 
+		<!--BACKGROUND TILES AND SETTINGS-->
 		<link rel="stylesheet" href="styles/background/bgtiles.css" />
+		<link rel="stylesheet" href="styles/background/bgsettings.css" />
 		<script src="scripts/bgtiles.js" defer></script>
+		<script src="scripts/bgtiles-settings.js"></script>
 	</head>
-	<body>
-		<div id="background">
-			<div id="tiles-container"></div>
+	<body data-tsettings="false" data-nav="false">
+		<div id="tiles-settings-container">
+			<div id="tiles-settings"></div>
+			<button id="tiles-settings-btn" onclick="toggleTilesSettings()">
+				<i class="fa-solid fa-arrow-right open-icon"></i>
+				<i class="fa-solid fa-arrow-left close-icon"></i>
+			</button>
 		</div>
-		<main></main>
+		<main>
+			<div id="background">
+				<div id="tiles-container"></div>
+			</div>
+		</main>
 	</body>
 </html>
