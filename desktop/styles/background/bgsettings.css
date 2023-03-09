@@ -50,6 +50,11 @@ body[data-tsettings="true"] > main {
 	transition-property: transform;
 	transition-duration: var(--tsettings-transition-duration);
 	transition-timing-function: ease;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 body[data-tsettings="false"] > #tiles-settings-container > #tiles-settings {
@@ -116,4 +121,9 @@ body[data-tsettings="true"] > #tiles-settings-container > #tiles-settings-btn {
 	transition-property: opacity;
 	transition-duration: 0.5s;
 	transition-timing-function: ease;
+}
+
+#tiles-settings > h2 {
+	text-align: center;
+	margin: 0px;
 }

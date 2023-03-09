@@ -76,7 +76,32 @@ const clearOpacity = () => {
 	}
 };
 
-const updateSettings = () => {};
+const updateSettings = () => {
+	let newTileSize = document.getElementById("bgtiles-size").value;
+	let newHoverRadius = document.getElementById("bgtiles-hover-radius").value;
+	let newBorderRadius = document.getElementById(
+		"bgtiles-border-radius"
+	).value;
+	let newBorderVisibility = document.getElementById(
+		"bgtiles-border-visible"
+	).checked;
+
+	if (newTileSize != tileSize) {
+		document.getElementById("bgtiles-border-radius").max = Math.ceil(
+			newTileSize / 2
+		);
+	}
+
+	if (newHoverRadius != hoverAffectedRadius) {
+		hoverAffectedRadius = newHoverRadius;
+	} else {
+		tileSize = newTileSize;
+		tileBorders = newBorderVisibility;
+		tileBorderRadius = newBorderRadius;
+
+		updateGrid();
+	}
+};
 
 updateGrid();
 window.onresize = () => {

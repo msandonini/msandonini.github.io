@@ -24,9 +24,59 @@
 		<script src="scripts/bgtiles.js" defer></script>
 		<script src="scripts/bgtiles-settings.js"></script>
 	</head>
-	<body data-tsettings="false" data-nav="false">
+	<body data-tsettings="true" data-nav="false">
 		<div id="tiles-settings-container">
-			<div id="tiles-settings"></div>
+			<div id="tiles-settings">
+				<h2>BACKGROUND TILES SETTINGS</h2>
+				<br />
+				<label for="bgtiles-size"> Background tiles size </label>
+				<input
+					type="range"
+					name="bgtiles-size"
+					id="bgtiles-size"
+					min="20"
+					max="60"
+					value="30"
+					onchange="updateSettings()"
+				/>
+				<br />
+				<label for="bgtiles-hover-radius">
+					Background tiles hover effect radius
+				</label>
+				<input
+					type="range"
+					name="bgtiles-hover-radius"
+					id="bgtiles-hover-radius"
+					min="0"
+					max="5"
+					value="5"
+					onchange="updateSettings()"
+				/>
+				<br />
+				<label for="bgtiles-border-radius">
+					Background tiles border radius
+				</label>
+				<input
+					type="range"
+					name="bgtiles-border-radius"
+					id="bgtiles-border-radius"
+					min="0"
+					max="15"
+					value="2"
+					onchange="updateSettings()"
+				/>
+				<br />
+				<label for="bgtiles-border-visible">
+					Show background tiles borders
+				</label>
+				<input
+					type="checkbox"
+					name="bgtiles-border-visible"
+					id="bgtiles-border-visible"
+					unchecked
+					onchange="updateSettings()"
+				/>
+			</div>
 			<button id="tiles-settings-btn" onclick="toggleTilesSettings()">
 				<i class="fa-solid fa-arrow-right open-icon"></i>
 				<i class="fa-solid fa-arrow-left close-icon"></i>
