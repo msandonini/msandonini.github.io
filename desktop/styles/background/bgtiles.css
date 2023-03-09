@@ -13,7 +13,7 @@
 }
 
 body {
-	animation: bgpan var(--gtime) linear infinite;
+	animation: kf-bgpan var(--gtime) linear infinite;
 
 	background: linear-gradient(
 		to bottom,
@@ -68,7 +68,7 @@ body {
 	inset: 0px;
 }
 
-@keyframes bgpan {
+@keyframes kf-bgpan {
 	from {
 		background-position: center 500vh;
 	}
