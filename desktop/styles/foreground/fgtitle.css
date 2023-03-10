@@ -21,10 +21,53 @@
 	pointer-events: all;
 }
 
+.fg-gtext {
+	animation: kf-bgpan var(--gtime) linear infinite;
+	animation-delay: -1s;
+
+	background: linear-gradient(
+		to bottom,
+		var(--g1),
+		var(--gsep),
+		var(--g2),
+		var(--gsep),
+		var(--g3),
+		var(--gsep),
+		var(--g1)
+	);
+	background-size: 100% 500vh;
+
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+
+	transition-property: left;
+	transition-duration: var(--nav-transition-duration);
+	transition-timing-function: ease;
+}
+.fg-gtext:after {
+	text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+		1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+
+	position: absolute;
+	left: 0%;
+
+	content: attr(data-text);
+	display: inline-block;
+	z-index: -1;
+
+	background: none;
+}
+
 h1 {
 	margin: 0px;
 }
 
 h3 {
 	margin: 0px;
+}
+
+.fg-gtext-container {
+	display: inline;
+	position: relative;
 }
