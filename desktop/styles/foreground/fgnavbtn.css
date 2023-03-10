@@ -1,0 +1,60 @@
+:root {
+	--nav-btn-size: 45px;
+
+	--nav-transition-duration: 1s;
+}
+
+#nav-toggle-btn {
+	position: absolute;
+
+	bottom: 5px;
+
+	width: var(--nav-btn-size);
+	height: var(--nav-btn-size);
+
+	border: none;
+	border-radius: var(--nav-btn-size);
+
+	cursor: pointer;
+
+	animation: kf-bgpan var(--gtime) linear infinite;
+
+	background: linear-gradient(
+		to bottom,
+		var(--g1),
+		var(--gsep),
+		var(--g2),
+		var(--gsep),
+		var(--g3),
+		var(--gsep),
+		var(--g1)
+	);
+	background-size: 100% 500vh;
+
+	transition-property: left;
+	transition-duration: var(--nav-transition-duration);
+	transition-timing-function: ease;
+}
+
+#nav-toggle-btn > i {
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	opacity: 0;
+
+	font-size: 1.2rem;
+
+	transition-property: opacity;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+}
+
+body[data-nav="false"] #nav-toggle-btn:hover > .navbtn-open-icon {
+	opacity: 1;
+}
+body[data-nav="true"] #nav-toggle-btn:hover > .navbtn-close-icon {
+	opacity: 1;
+}

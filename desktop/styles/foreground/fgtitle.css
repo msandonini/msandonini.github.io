@@ -1,0 +1,30 @@
+#foreground {
+	position: absolute;
+
+	top: 0px;
+	left: 0px;
+
+	z-index: 2;
+
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	pointer-events: none;
+}
+
+#foreground button {
+	pointer-events: all;
+}
+
+h1 {
+	margin: 0px;
+}
+
+h3 {
+	margin: 0px;
+}

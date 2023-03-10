@@ -21,8 +21,18 @@
 		<!--BACKGROUND TILES AND SETTINGS-->
 		<link rel="stylesheet" href="styles/background/bgtiles.css" />
 		<link rel="stylesheet" href="styles/background/bgsettings.css" />
-		<script src="scripts/bgtiles.js" defer></script>
-		<script src="scripts/bgtiles-settings.js"></script>
+		<script src="scripts/background/bgtiles.js" defer></script>
+		<script src="scripts/background/bgtiles-settings.js"></script>
+
+		<!--FOREGROUND SETTINGS-->
+		<link rel="stylesheet" href="styles/foreground/fgtitle.css" />
+
+		<!--NAV-->
+		<link rel="stylesheet" href="styles/foreground/fgnavbtn.css" />
+		<script src="scripts/foreground/nav.js"></script>
+
+		<!--DEFAULT HTML COMPONENTS-->
+		<link rel="stylesheet" href="styles/components/input.css" />
 	</head>
 	<body data-tsettings="false" data-nav="false">
 		<div id="tiles-settings-container">
@@ -78,13 +88,22 @@
 				/>
 			</div>
 			<button id="tiles-settings-btn" onclick="toggleTilesSettings()">
-				<i class="fa-solid fa-arrow-right open-icon"></i>
-				<i class="fa-solid fa-arrow-left close-icon"></i>
+				<i class="fa-solid fa-arrow-right bgtiles-open-icon"></i>
+				<i class="fa-solid fa-arrow-left bgtiles-close-icon"></i>
 			</button>
 		</div>
 		<main>
 			<div id="background">
 				<div id="tiles-container"></div>
+			</div>
+			<div id="foreground">
+				<h1>SANDONINI MIRCO</h1>
+				<h3>Computer engineering student</h3>
+
+				<button id="nav-toggle-btn" onclick="toggleNav()">
+					<i class="fa-solid fa-bars-staggered navbtn-open-icon"></i>
+					<i class="fa-solid fa-xmark navbtn-close-icon"></i>
+				</button>
 			</div>
 		</main>
 	</body>

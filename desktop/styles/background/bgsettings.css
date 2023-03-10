@@ -9,13 +9,13 @@
 body[data-tsettings="false"]
 	> #tiles-settings-container
 	> #tiles-settings-btn:hover
-	> .open-icon {
+	> .bgtiles-open-icon {
 	opacity: 1;
 }
 body[data-tsettings="true"]
 	> #tiles-settings-container
 	> #tiles-settings-btn:hover
-	> .close-icon {
+	> .bgtiles-close-icon {
 	opacity: 1;
 }
 
