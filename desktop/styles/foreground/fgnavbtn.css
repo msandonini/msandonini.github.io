@@ -18,6 +18,7 @@
 	cursor: pointer;
 
 	animation: kf-bgpan var(--gtime) linear infinite;
+	animation-delay: -2s;
 
 	background: linear-gradient(
 		to bottom,
