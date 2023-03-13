@@ -19,20 +19,21 @@
 		<link rel="stylesheet" href="styles/base.css" />
 
 		<!--BACKGROUND TILES AND SETTINGS-->
-		<link rel="stylesheet" href="styles/background/bgtiles.css" />
-		<link rel="stylesheet" href="styles/background/bgsettings.css" />
+		<link rel="stylesheet" href="styles/index/background/bgtiles.css" />
+		<link rel="stylesheet" href="styles/index/background/bgsettings.css" />
 		<script src="scripts/background/bgtiles.js" defer></script>
 		<script src="scripts/background/bgtiles-settings.js"></script>
 
 		<!--FOREGROUND SETTINGS-->
-		<link rel="stylesheet" href="styles/foreground/fgtitle.css" />
+		<link rel="stylesheet" href="styles/index/foreground/fgtitle.css" />
 
 		<!--NAV-->
-		<link rel="stylesheet" href="styles/foreground/fgnavbtn.css" />
-		<script src="scripts/foreground/nav.js"></script>
+		<link rel="stylesheet" href="styles/index/nav/navbtn.css" />
+		<link rel="stylesheet" href="styles/index/nav/nav.css" />
+		<script src="scripts/nav/nav.js"></script>
 
 		<!--DEFAULT HTML COMPONENTS-->
-		<link rel="stylesheet" href="styles/components/input.css" />
+		<link rel="stylesheet" href="styles/index/components/input.css" />
 	</head>
 	<body data-tsettings="false" data-nav="false">
 		<div id="tiles-settings-container">
@@ -108,12 +109,12 @@
 						Computer engineering student
 					</h3>
 				</div>
-
-				<button id="nav-toggle-btn" onclick="toggleNav()">
-					<i class="fa-solid fa-bars-staggered navbtn-open-icon"></i>
-					<i class="fa-solid fa-xmark navbtn-close-icon"></i>
-				</button>
 			</div>
+			<button id="nav-toggle-btn" onclick="toggleNav()">
+				<i class="fa-solid fa-bars-staggered navbtn-open-icon"></i>
+				<i class="fa-solid fa-xmark navbtn-close-icon"></i>
+			</button>
+			<nav></nav>
 		</main>
 	</body>
 </html>
