@@ -1,3 +1,7 @@
+:root {
+	--text-border-color: black;
+}
+
 #foreground {
 	position: absolute;
 
@@ -46,8 +50,10 @@
 	transition-timing-function: ease;
 }
 .fg-gtext:after {
-	text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
-		1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+	text-shadow: 2px 0 var(--text-border-color), -2px 0 var(--text-border-color),
+		0 2px var(--text-border-color), 0 -2px var(--text-border-color),
+		1px 1px var(--text-border-color), -1px -1px var(--text-border-color),
+		1px -1px var(--text-border-color), -1px 1px var(--text-border-color);
 
 	position: absolute;
 	left: 0%;
